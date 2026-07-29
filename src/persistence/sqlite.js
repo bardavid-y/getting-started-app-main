@@ -1,7 +1,8 @@
 const sqlite3 = require('sqlite3').verbose();
 const fs = require('fs');
-const location = process.env.SQLITE_DB_LOCATION || '/etc/todos/todo.db';
+const location = process.env.SQLITE_DB_LOCATION || './todo.db';
 
+const dbPath = process.env.SQLITE_PATH || './todo.db';
 let db, dbAll, dbRun;
 
 function init() {
